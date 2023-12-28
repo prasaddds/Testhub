@@ -1,0 +1,54 @@
+.filteration-two-parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+}
+.filteration-two-parts>div{
+    width:50%;
+    margin: 1%;
+    border: 1px solid rgb(245, 193, 96);
+    padding: 2%;
+    overflow-y: scroll;
+    height: 50vh;
+}
+.filteration-two-parts>div:nth-child(1)
+{
+    background-color: rgba(239, 233, 222, 0.8);
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+   
+}
+.filteration-btns{
+    padding:3px 20px;
+    background-color: orange;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    border: none;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    cursor: pointer;
+}
+
+.filter-each-div-con h2{
+    font-family: 'Courier New', 'Times New Roman', Times, serif;
+}
+.filter-each-div-con{
+    border-bottom: 1px solid orange;
+    padding: 10px;
+}
+.filter-each-div-con:hover{
+    background-color: rgb(250, 241, 225);
+}
+
+.filter-container>h1{
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin:1%;
+    font-family: 'Times New Roman', Times, serif;
+}

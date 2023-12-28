@@ -1,0 +1,264 @@
+
+/* first div css*/
+.logout-test-first-div-bg-image{
+    min-height:95vh ;
+    background-image:
+            linear-gradient(45deg,
+              rgba(28, 27, 27, 0.75),
+              rgba(7, 7, 7, 0.75)), url('../images/lotestbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    user-select: none;
+}
+.logout-test-first-div-bg-image h2{
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.logout-test-first-div-bg-image h1{
+    color: #F89831;
+    font-family: "Karla", Sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+@media screen and (max-width:600px){
+    .logout-test-first-div-bg-image h2{
+        color: #FFFFFF;
+        font-family: "Karla", Sans-serif;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    
+    .logout-test-first-div-bg-image h1{
+        color: #F89831;
+        font-family: "Karla", Sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 4rem;
+    }
+}
+
+/* second div css */
+.logout-test-page-second-div{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:5%;
+    padding-bottom: 5%;
+
+}
+.logout-test-page-second-div h1{
+    font-family: "Karla", Sans-serif;
+    font-size: 2.1rem;
+    font-weight: 800;
+
+}
+.logout-test-page-second-div p{
+    margin-top: 2%;
+    color:#7A7A7A;
+    font-size: 1.12rem;
+    font-family: sans-serif;
+    width: 60%;
+}
+
+@media screen and (max-width:600px){
+    .logout-test-page-second-div h1{
+        font-size: 1.6rem;
+    }
+    .logout-test-page-second-div p{
+        width: 90%;
+        font-size: 0.8rem;
+    }
+}
+/* third div css */
+.logout-page-third-div-important{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.logout-page-third-div-important-each{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    width: 70%;
+    border: 1px solid rgb(190, 188, 188);
+    padding: 5%;
+    padding-bottom:2% ;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+.logout-page-third-div-important-each h3{
+    font-size: 1.3rem;
+    color:#152235;
+    font-family: sans-serif;
+}
+.logout-page-third-div-important-each div p{
+    color: #333333;
+    font-size: 1.12rem;
+    margin: 0px 0px 1rem;
+}
+.logout-page-third-div-important-each .logout-page-third-div-imp-each-para{
+    width: 65%;
+}
+
+@media screen and (max-width:700px){
+    .logout-page-third-div-important-each{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        gap:10px;
+        border: 1px solid rgb(190, 188, 188);
+        padding: 5%;
+        padding-bottom:2% ;
+        border-radius: 4px;
+    }
+    .logout-page-third-div-important-each div p{
+        color: #333333;
+        font-size: 0.8rem;
+        margin: 0px 0px 1rem;
+    }
+    .logout-page-third-div-important-each h3{
+        width:100%;
+        font-size: 1rem;
+    }
+    .logout-page-third-div-important-each .logout-page-third-div-imp-each-para{
+        width: 100%;
+    }
+
+}
+
+/* logout test eigth page */
+
+.logout-test-page-eigth-div{
+    min-height: 50vh;
+    background-image:
+            linear-gradient(45deg,
+              rgba(28, 27, 27, 0.75),
+              rgba(7, 7, 7, 0.75)), url('../images/logouttestlastbg.jpg');
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+.logout-test-page-eigth-div h2{
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size:2.3rem;
+    font-weight: 700;
+    line-height: 38.4px;
+}
+
+.logout-test-page-eigth-div h1{
+    color: #F89831;
+    font-family: "Karla", Sans-serif;
+    font-size: 4.36rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+}
+
+.logout-test-page-eigth-div button{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F89831;
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    border: 1px solid #F89831;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logout-test-page-eigth-div button:hover{
+    color: #F89831;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:700px){
+    .logout-test-page-eigth-div h2{
+        color: #FFFFFF;
+        font-family: "Karla", Sans-serif;
+        font-size:1.6rem;
+        font-weight: 700;
+        line-height: 38.4px;
+    }
+    
+    .logout-test-page-eigth-div h1{
+        color: #F89831;
+        font-family: "Karla", Sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+        margin-top: 1%;
+        margin-bottom: 1.5%;
+    }
+}
+
+@media screen and (max-width:380px){
+    .logout-test-page-eigth-div h2{
+        color: #FFFFFF;
+        font-family: "Karla", Sans-serif;
+        font-size:1.1rem;
+        font-weight: 700;
+        line-height: 38.4px;
+    }
+    
+    .logout-test-page-eigth-div h1{
+        color: #F89831;
+        font-family: "Karla", Sans-serif;
+        font-size: 2.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        
+        margin-top: 1%;
+        margin-bottom: 1.5%;
+    }
+    .logout-test-page-eigth-div button{
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #F89831;
+        color: #FFFFFF;
+        font-family: "Karla", Sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border: 1px solid #F89831;
+        border-radius: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

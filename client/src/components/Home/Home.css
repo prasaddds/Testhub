@@ -1,0 +1,651 @@
+.home-page-container{
+    scroll-behavior: smooth;
+}
+
+.home-images-gif{
+    width: 200px;
+    height: 150px;
+}
+.home-page-first-div{
+    min-height:90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: #152235;
+    user-select: none;
+}
+.home-page-headers{
+   
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 50%;
+    padding: 3%;
+    color: white;
+    
+}
+.home-page-headers h5{
+    font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif";
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+.home-page-headers h3{
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.03rem;
+}
+.home-page-headers h1{
+    font-size: 4.0rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+.home-page-headers p{
+    font-weight: bold;
+    /* padding-top:2%; */
+    padding-bottom: 2%;
+}
+.home-page-image-first-div{
+    width: 50%;
+}
+.Home-page-head-image{
+    width: 100%;
+    height: 90vh;
+}
+.home-page-register-btn{
+    width: 50%;
+    height:40px;
+    margin-top: 2%;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+.home-page-register-btn:hover{
+    background-color: transparent;
+    color: orange;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px){
+    .home-page-first-div{
+       min-height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        background-color: #152235;
+        user-select: none;
+    }
+    .home-page-image-first-div{
+        width: 100%;
+    }
+    .Home-page-head-image{
+        width: 100%;
+        max-height: 40vh;
+    }
+    .home-page-headers{
+   
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        width: 80%;
+        padding: 3%;
+        color: white;
+        
+    }
+    .home-page-headers h1{
+        font-size: 3.0rem;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.03rem;
+    }
+}
+
+/* second div part*/
+.home-page-second-div-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.home-page-second-div-head{
+    color: #2c3848;
+    font-family: "Karla", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3em;
+    text-align: center;
+    margin-top:3%;
+    margin-bottom: 2%;
+    user-select: none;
+}
+
+.home-page-second-div-parts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+
+    align-items: center;
+}
+.home-page-sec-parts-each h1{
+    color: #273F69;
+    font-family: "Karla", Sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    padding-top: 1%;
+}
+.home-page-sec-parts-each:hover h1, .home-page-sec-parts-each:hover p{
+    color: white;
+}
+.home-page-sec-parts-each p{
+    color: #5C5C5C;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.31rem;
+    font-weight: 400;
+    line-height: 24.55px;
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+.home-page-second-each-img{
+    width: 60px;
+    height: 60px;
+    user-select: none;
+}
+.home-page-sec-parts-each{
+    
+    width:30%;
+    min-height: 16rem;
+    background: white;
+    /*align-item:center*/
+    text-align: center;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    transition-duration: 0.5s, 0.3s, 0.3s, 0.3s;
+    transition-timing-function: ease, ease, ease, ease;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: background-color, border, border-radius, box-shadow;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    user-select: none;
+}
+.home-page-sec-parts-each:hover{
+    background-color: #273F69;
+    color: white;
+}
+
+.home-page-second-div-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1.3rem;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+.home-page-second-div-buttons button{
+    color:#152235;
+    border:1px solid #152235;
+    padding:0.8rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 30px;
+    transition-duration: 0.4s,0.3s;
+    transition-timing-function: ease,ease-in;
+    transition-property: background-color,color;
+}
+.home-page-second-div-buttons div:nth-child(2) button{
+    background-color: orange;
+    color: white;
+    border: none;
+}
+.home-page-second-div-buttons button:hover{
+    cursor: pointer;
+    background-color: #152235;
+    color: white;
+}
+
+.home-page-second-div-buttons div:nth-child(2) button:hover{
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}
+@media screen and (max-width:910px){
+    .home-page-second-div-head{
+        font-size: 1.1rem;
+    }
+    .home-page-sec-parts-each{
+        width: 70%;
+        margin-top: 2%;
+    }
+}
+
+/* 2nd div buttons media */
+
+@media screen and (max-width:700px){
+    .home-page-second-div-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* third div start here */
+.home-page-third-div-container{
+    background-color: #f8f8f8;
+    padding-top: 6%;
+    padding-bottom: 1%;
+    user-select: none;
+}
+.home-page-third-div-header{
+    text-align: center;
+    color: #152235;
+    font-family: "Karla", Sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.home-page-third-div-parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.home-page-third-div-parts-each{
+    text-align: center;
+    padding: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    letter-spacing: 0.15rem;
+}
+.home-page-third-div-parts-each p:nth-child(1){
+    color: #152235;
+    font-size: 2.2rem;
+    font-family: "Karla", Sans-serif;
+}
+.home-page-third-div-parts-each p:nth-child(2){
+    color: #444E5D;
+    font-size: 1.2rem;
+    font-family: "Karla", Sans-serif;
+}
+
+.home-page-third-div-parts div:nth-child(2){
+    border: 1px solid orange;
+    border-top: none;
+    border-bottom:none ;
+}
+
+@media screen and (max-width:700px){
+    .home-page-third-div-parts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .home-page-third-div-parts div:nth-child(2){
+        border: 1px solid orange;
+        border-left: none;
+        border-right:none ;
+    }
+    .home-page-third-div-header{
+        text-align: center;
+        color: #152235;
+        font-family: "Karla", Sans-serif;
+        font-size: 1.9rem;
+        font-weight: 400;
+    }
+    .home-page-third-div-parts-each p:nth-child(1){
+        color: #152235;
+        font-size: 1.8rem;
+        font-family: "Karla", Sans-serif;
+    }
+    .home-page-third-div-parts-each p:nth-child(2){
+        color: #444E5D;
+        font-size: 1.2rem;
+        font-family: "Karla", Sans-serif;
+    }
+}
+
+
+/* css of home page fourth container starts here */
+.home-page-fourth-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.home-page-fourth-con-header{
+    margin-top: 3%;
+    margin-left: 12%;
+    margin-bottom: 2%;
+}
+.home-page-fourth-con-header h2{
+    color: #13294A;
+    font-size: 1.5rem;
+    font-family: "karla",sans-serif;
+}
+.home-page-fourth-con-header h2 span{
+    color: #3D64B1;
+}
+
+.home-page-fourth-container-imp-parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.home-page-fourth-container-imp-parts-first{
+    text-align: center;
+    padding: 0px 4% 0px 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #333333;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 70%;
+}
+.home-page-fourth-container-imp-parts-first p:nth-child(1){
+    color: #F89831;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.51rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.home-page-fourth-container-imp-parts-first p:nth-child(2){
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.51rem;
+}
+.home-page-fourth-container-imp-parts-first p:nth-child(3){
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.51rem;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+.home-page-fourth-container-imp-parts-first p:nth-child(4){
+    color: #FFFFFF;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.51rem;
+
+}
+.home-page-fourth-container-imp-parts-first p:nth-child(5){
+    color: #F89831;
+    font-family: "Karla", Sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.51rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.home-page-fourth-container-imp-parts-second-header h2{
+    display: block;
+    font-weight: bold;
+    color:#13294A;
+    font:1.2rem;
+    font-family: sans-serif;
+}
+.home-page-fourth-container-imp-parts-second-points{
+    padding-top: 5%;
+}
+.home-page-fourth-container-imp-parts-second-points div p{
+    color: #6B6B6B;
+    font-size:1.2rem ;
+    font-family: sans-serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.home-page-fourth-container-imp-parts-second-points div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Arrow-images-in-home-page-fourth-div{
+    width:20px;
+    height: 20px;
+    margin-right: 1%;
+}
+
+@media screen and (max-width:860px){
+    .home-page-fourth-container-imp-parts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        
+    }
+    .home-page-fourth-container-imp-parts-first{
+        text-align: center;
+        padding: 0px 4% 0px 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #333333;
+    }
+    .home-page-fourth-container-imp-parts-second{
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+
+}
+
+/* home page 5th div container */
+
+.home-page-fifth-container-imp-parts-each{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.home-page-fifth-container-imp-parts-each p{
+    color: #6B6B6B;
+    font-size:1.2rem ;
+    font-family: sans-serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.fifth-home-page-exam-start-img{
+    width: 30rem;
+    height: 18rem;
+    margin-left: 2%;
+}
+
+.home-page-fifth-div-second-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+.home-page-fifth-container{
+    background-color: #f8f8f8;
+    padding-bottom: 5%;
+    user-select: none;
+}
+
+.home-page-fifth-container-button{
+    text-align: center;
+}
+.home-page-fifth-container button{
+    width: 30%;
+    background-color: #F89831;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    border: none;
+    height: 3rem;
+    padding: 0.7rem;
+    border-radius: 30px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+}
+.home-page-fifth-container button:hover{
+    background-color: transparent;
+    color: #F89831;
+    cursor: pointer;
+    border: 1px solid #F89831;
+}
+
+@media screen and (max-width:960px){
+    .home-page-fifth-div-second-container{
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: #f8f8f8;
+    }
+    .fifth-home-page-exam-start-img{
+        width: 100%;
+        height: 18rem;
+        margin-left: auto;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width:500px){
+    .home-page-fifth-container button{
+        width: 60%;
+    }
+    .fifth-home-page-exam-start-img{
+        height:15rem;
+    }
+}
+
+/* sixth div css starts here */
+.home-page-sixth-div-container{
+    padding-top:2%;
+    padding-bottom: 5%;
+}
+.home-page-sixth-div-header{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.home-page-sixth-div-header h2{
+    text-align: center;
+    color: #152235;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+.home-page-sixth-div-important-parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.home-page-sixth-div-important-parts-each{
+    padding: 1%;
+    width:50%;
+}
+.home-page-sixth-div-important-parts-each h1{
+    color:#2C3848;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+
+}
+.home-page-sixth-div-important-parts-each p{
+    color: #444E5D;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin-top: 2%;
+    
+}
+.home-page-sixth-div-important-parts-each .home-page-sixth-div-read-more-btn{
+    background-color: #13294A;
+    color: white;
+    display:inline-block;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    border-radius: 20px;
+    margin-top:2%;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+.home-page-sixth-div-important-parts-each .home-page-sixth-div-read-more-btn:hover{
+    background-color: white;
+    color: #13294A;
+    cursor: pointer;
+    border: 1px solid #13294A;
+    
+}
+
+
+
+@media screen and (max-width:700px){
+    .home-page-sixth-div-important-parts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1.5rem;
+        margin: 5%;
+    }
+    .home-page-sixth-div-important-parts-each{
+        padding: 1%;
+        width: 70%;
+    }
+    .home-page-sixth-div-header h2{
+        text-align: center;
+        color: #152235;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+    }
+    .home-page-sixth-div-header{
+        margin-top: 6%;
+        margin-bottom: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+}
