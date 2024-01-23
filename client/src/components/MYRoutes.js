@@ -10,7 +10,6 @@ import About from './About/About.js';
 import Testsdisplay from './TakeTest/Testsdisplay'
 import LogoutTest from './LogoutTest/LogoutTest.js';
 import Taketest from './TakeTest/Taketest'
-import Navbar from './Navbar/Navbar'
 const MYRoutes = () => {
   return (
     <div>

@@ -20,7 +20,6 @@ const Profile = () => {
     <>
     <Navbar/>
     <div className='profile-update-edit'>
-    {/* <h1 className='profile-update-edit-h1'>update profile</h1> */}
     {
         authcheck&&authcheck.category==="student"?<StudentProfile/>:authcheck&&authcheck.category==="recruiter"?<RecruiterProfile/>:""
     }

@@ -6,7 +6,7 @@ const {AdminRegister ,LoginUser,studentregister,recruiterregister,check,logout
 ,updateprofile}=require('../controllers/Controllers');
 const {Addtest,mytestsdata,deletequestion,displayAllTests,testquestions, submittest,started_test,studentscores,liststds}=require('../controllers/Addtests');
 
-router.post('/AdminRegister',AdminRegister)
+// router.post('/AdminRegister',AdminRegister)
 router.post('/studentregister',studentregister)
 router.post('/recruiterregister',recruiterregister)
 router.get('/check',Middleware,check);

@@ -33,22 +33,19 @@ const Login = () => {
     <div>
         <Navbar/>
         <div className='login-container'>
-        {/* <img src={Logingif} alt="logingif" className='logingif-class'/>*/}
         <div className="login">
           <h1>Login</h1>
           <div>
-          {/*<label htmlFor="">Gmail val</label>*/}
           <input type="text" placeholder='enter gmail'  onChange={(e)=>setGmail(e.target.value)} className="gmail-input-class"/>
           </div>
           <div>
-          {/*<label htmlFor="">password</label>*/}
           <input type="password" placeholder='enter password' onChange={(e)=>setPass(e.target.value)} className="gmail-input-class"/>
           </div>
           <div>
           <button onClick={sendData} className="login-button">login</button>
           </div>
           <div className='login-register-class'>
-            <p>Don’t have an account?<NavLink to={'/signup'}>Register</NavLink></p>
+            <p>Don't have an account?<NavLink to={'/signup'}>Register</NavLink></p>
           </div>
             
         </div>

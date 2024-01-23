@@ -7,45 +7,45 @@ const cookieparser=require('cookie-parser');
 app.use(cookieparser());
 
 // using adminmodel to store the values
-const adminmodel=require('../models/adminModel.js');
+// const adminmodel=require('../models/adminModel.js');
 const recruitermodel=require('../models/recruiter');
 const studentmodel=require('../models/student');
 
 // storing the admin register
-const AdminRegister=async(req,res)=>{
-    const vals=await req.body;
-    const hashpass=await bcrypt.hash(vals.pass,10);
-    const hashcnfrmpass=await bcrypt.hash(vals.cnfrmpass,10);
-    const {name,gmail,contact,pass,cnfrmpass}=vals;
-   const check= await adminmodel.findOne({gmail:gmail})||await studentmodel.findOne({gmail:gmail})||await recruitermodel.findOne({gmail:gmail});
-   if(check){
-    res.json("gmail already exists");
-   }
-   else{
-    const newAdmin= await new adminmodel({
-        name:name,
-        gmail:gmail,
-        contact:contact,
-        pass:hashpass,
-        cnfrm:hashcnfrmpass
-    });
-    newAdmin.save((err)=>{
-        if(err){
-            res.json(err.message)
-        }
-        else{
-            res.json("registered successfully");
-        }
-    })
-   }
-}
+// const AdminRegister=async(req,res)=>{
+//     const vals=await req.body;
+//     const hashpass=await bcrypt.hash(vals.pass,10);
+//     const hashcnfrmpass=await bcrypt.hash(vals.cnfrmpass,10);
+//     const {name,gmail,contact,pass,cnfrmpass}=vals;
+//    const check= /*await adminmodel.findOne({gmail:gmail})||*/await studentmodel.findOne({gmail:gmail})||await recruitermodel.findOne({gmail:gmail});
+//    if(check){
+//     res.json("gmail already exists");
+//    }
+//    else{
+//     const newAdmin= await new adminmodel({
+//         name:name,
+//         gmail:gmail,
+//         contact:contact,
+//         pass:hashpass,
+//         cnfrm:hashcnfrmpass
+//     });
+//     newAdmin.save((err)=>{
+//         if(err){
+//             res.json(err.message)
+//         }
+//         else{
+//             res.json("registered successfully");
+//         }
+//     })
+//    }
+// }
 
 
 // studentregister
 const studentregister=async(req,res)=>{
     const data=await req.body.vals;
         const{studentname,studentgmail,studentqualification,studentcollege,studentpercentage,studentyear,studentskills,studentpass,studentcnfrm}=data;
-        const check=await adminmodel.findOne({gmail:studentgmail})||await studentmodel.findOne({gmail:studentgmail})||await recruitermodel.findOne({gmail:studentgmail});
+        const check=/*await adminmodel.findOne({gmail:studentgmail})||*/await studentmodel.findOne({gmail:studentgmail})||await recruitermodel.findOne({gmail:studentgmail});
         const hashpass=await bcrypt.hash(studentpass,10);
         const hashcnfrm=await bcrypt.hash(studentcnfrm,10);
     if(!check){
@@ -83,7 +83,7 @@ const recruiterregister= async(req,res)=>{
     const hashpass=await bcrypt.hash(Rpass,10);
     const hashcnfrm=await bcrypt.hash(Rcnfrmpass,10);
     console.log(Rgmail);
-    const check=await adminmodel.findOne({gmail:Rgmail}) || await studentmodel.findOne({gmail:Rgmail}) ||await recruitermodel.findOne({gmail:Rgmail});
+    const check=/*await adminmodel.findOne({gmail:Rgmail}) ||*/ await studentmodel.findOne({gmail:Rgmail}) ||await recruitermodel.findOne({gmail:Rgmail});
     if(!check){
         const data=await new recruitermodel({
             name:Rname,
@@ -123,25 +123,12 @@ const recruiterregister= async(req,res)=>{
 const LoginUser=async(req,res)=>{
     const gmail=await req.body.gmail;
     const pass=await req.body.pass;
-    const x=await adminmodel.findOne({gmail:gmail})||await studentmodel.findOne({gmail:gmail})||await recruitermodel.findOne({gmail:gmail});
+    const x=/*await adminmodel.findOne({gmail:gmail})||*/await studentmodel.findOne({gmail:gmail})||await recruitermodel.findOne({gmail:gmail});
     
     if(x){
         const passcheck= await bcrypt.compare(pass,x.pass);
         if(passcheck){
-            if(x.category==="Admin"){
-                console.log("admin loggedin")
-                const token=await x.generateadminToken();
-                const token1=await token.token1;
-                const token2=await token.token2; 
-                res.cookie("adminToken",token1,{httpOnly:true,expire:360000+Date.now()});
-                res.cookie("token",token2,{httpOnly:true,expire:360000+Date.now()});
-                if(token1&&token2){
-                    res.json({msg:"Logged in",data:x});
-                }else{
-                    res.json("Failed to login");
-                }
-            }
-            else if(x.category==="student"){
+            if(x.category==="student"){
                 console.log("student logged in");
                 const token=await x.generatestudentToken()
                 const token1=await token.token1;
@@ -158,8 +145,6 @@ const LoginUser=async(req,res)=>{
                 const token=await x.generaterecruitertoken();
                 const token1=await token.token1;
                 const token2=await token.token2;
-                // res.cookie('recruiterToken',token1,{httpOnly:true,expire:360000+Date.now()});
-                // res.cookie('token',token,{httpOnly:true,expire:360000+Date.now()});
                 res.cookie('recruiterToken',token1,{expire:0});
                 res.cookie('token',token, {expire:0});
                 if(token1&&token2){
@@ -186,12 +171,7 @@ const check=async(req,res)=>{
     const admin=req.admin;
     const student=req.student;
     const recruiter=req.recruiter;
-    if(admin){
-        const admindata=req.admindata;
-        // console.log("admin logged in");
-        res.json({val:"admin",status:200,data:admindata})
-    }
-    else if(student){
+    if(student){
         const studentdata=req.studentdata;
         res.json({val:"student",status:200,data:studentdata});
         // console.log("student logged in");
@@ -215,12 +195,7 @@ const logout=async(req,res)=>{
     const student=req.cookies.studentToken;
     const recruiter=req.cookies.recruiterToken;
     const token=req.cookies.token;
-    if(admin && token){
-        res.clearCookie('adminToken');
-        res.clearCookie('token');
-        res.json({userin:false,msg:"logged out"});
-    }
-    else if(student && token){
+    if(student && token){
         res.clearCookie('studentToken');
         res.clearCookie('token');
         res.json({userin:false,msg:"logged out"});
@@ -291,4 +266,4 @@ const worktrail=(req,res)=>{
 }
 
 
-module.exports={AdminRegister ,LoginUser,studentregister,recruiterregister,check,logout,updateprofile,worktrail};
+module.exports={LoginUser,studentregister,recruiterregister,check,logout,updateprofile,worktrail};

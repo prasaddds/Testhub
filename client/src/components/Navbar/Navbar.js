@@ -35,11 +35,8 @@ const Navbar = () => {
       }
     });
     const res= await checking.json()
-    if( res.val==="admin" && res.status===200){
-      setCat("admin");
-      setStatus(true);
-    }
-    else if( res.val==="student" &&res.status===200){
+    console.log("Res is "+res.val);
+    if( res.val==="student" &&res.status===200){
       setStatus(true);
       setCat("student");
     }
@@ -68,7 +65,7 @@ const Navbar = () => {
             {
               cat==="recruiter"?<li><NavLink to={'/addtests'}>AddTests</NavLink></li>
               :cat==="student"?<li><NavLink to={'/displayAllTests'}>Taketest</NavLink></li>
-              :cat==="admin"?<li><NavLink to={'/adminpanel'}>Adminpanel</NavLink></li>
+              // :cat==="admin"?<li><NavLink to={'/adminpanel'}>Adminpanel</NavLink></li>
               :<li><NavLink to={'/tests'}>Tests</NavLink></li>
             }
             {
